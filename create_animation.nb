@@ -1,0 +1,416 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15365,        408]
+NotebookOptionsPosition[     14730,        391]
+NotebookOutlinePosition[     15126,        407]
+CellTagsIndexPosition[     15083,        404]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"animation1", " ", "=", " ", 
+   RowBox[{"Animate", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Show", "[", 
+        RowBox[{
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Red", ",", 
+            RowBox[{"Sphere", "[", 
+             RowBox[{
+              RowBox[{"Q1", "[", "t", "]"}], ",", "0.1`"}], "]"}]}], "}"}], 
+          "]"}], ",", 
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Red", ",", 
+            RowBox[{"Sphere", "[", 
+             RowBox[{
+              RowBox[{"Q2", "[", "t", "]"}], ",", "0.1`"}], "]"}]}], "}"}], 
+          "]"}], ",", 
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Red", ",", 
+            RowBox[{"Sphere", "[", 
+             RowBox[{
+              RowBox[{"Q3", "[", "t", "]"}], ",", "0.1`"}], "]"}]}], "}"}], 
+          "]"}], ",", 
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Red", ",", 
+            RowBox[{"Sphere", "[", 
+             RowBox[{
+              RowBox[{"Q4", "[", "t", "]"}], ",", "0.1`"}], "]"}]}], "}"}], 
+          "]"}], ",", 
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Black", ",", 
+            RowBox[{"Line", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Q1", "[", "t", "]"}], ",", 
+               RowBox[{"Q2", "[", "t", "]"}]}], "}"}], "]"}]}], "}"}], "]"}], 
+         ",", 
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Black", ",", 
+            RowBox[{"Line", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Q2", "[", "t", "]"}], ",", 
+               RowBox[{"Q3", "[", "t", "]"}]}], "}"}], "]"}]}], "}"}], "]"}], 
+         ",", 
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Black", ",", 
+            RowBox[{"Line", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Q3", "[", "t", "]"}], ",", 
+               RowBox[{"Q4", "[", "t", "]"}]}], "}"}], "]"}]}], "}"}], "]"}], 
+         ",", 
+         RowBox[{"PlotRange", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"min1", "-", "0.1`"}], ",", 
+              RowBox[{"max1", "+", "0.1`"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"min2", "-", "0.1`"}], ",", 
+              RowBox[{"max2", "+", "0.1`"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"min3", "-", "0.1`"}], ",", 
+              RowBox[{"max3", "+", "0.1`"}]}], "}"}]}], "}"}]}], ",", 
+         RowBox[{"Axes", "\[Rule]", "True"}], ",", " ", 
+         RowBox[{"ImageSize", "->", "Large"}], ",", " ", 
+         RowBox[{"PlotLabel", "\[Rule]", "\"\<Original system\>\""}]}], "]"}],
+        ",", 
+       RowBox[{"Show", "[", 
+        RowBox[{
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Red", ",", 
+            RowBox[{"Sphere", "[", 
+             RowBox[{
+              RowBox[{"Qn1", "[", "t", "]"}], ",", "0.1`"}], "]"}]}], "}"}], 
+          "]"}], ",", 
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Red", ",", 
+            RowBox[{"Sphere", "[", 
+             RowBox[{
+              RowBox[{"Qn2", "[", "t", "]"}], ",", "0.1`"}], "]"}]}], "}"}], 
+          "]"}], ",", 
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Red", ",", 
+            RowBox[{"Sphere", "[", 
+             RowBox[{
+              RowBox[{"Qn3", "[", "t", "]"}], ",", "0.1`"}], "]"}]}], "}"}], 
+          "]"}], ",", 
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Red", ",", 
+            RowBox[{"Sphere", "[", 
+             RowBox[{
+              RowBox[{"Qn4", "[", "t", "]"}], ",", "0.1`"}], "]"}]}], "}"}], 
+          "]"}], ",", 
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Black", ",", 
+            RowBox[{"Line", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Qn1", "[", "t", "]"}], ",", 
+               RowBox[{"Qn2", "[", "t", "]"}]}], "}"}], "]"}]}], "}"}], "]"}],
+          ",", 
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Black", ",", 
+            RowBox[{"Line", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Qn2", "[", "t", "]"}], ",", 
+               RowBox[{"Qn3", "[", "t", "]"}]}], "}"}], "]"}]}], "}"}], "]"}],
+          ",", 
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Black", ",", 
+            RowBox[{"Line", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Qn3", "[", "t", "]"}], ",", 
+               RowBox[{"Qn4", "[", "t", "]"}]}], "}"}], "]"}]}], "}"}], "]"}],
+          ",", 
+         RowBox[{"PlotRange", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"min1n", "-", "0.1`"}], ",", 
+              RowBox[{"max1n", "+", "0.1`"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"min2n", "-", "0.1`"}], ",", 
+              RowBox[{"max2n", "+", "0.1`"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"min3n", "-", "0.1`"}], ",", 
+              RowBox[{"max3n", "+", "0.1`"}]}], "}"}]}], "}"}]}], ",", 
+         RowBox[{"Axes", "\[Rule]", "True"}], ",", " ", 
+         RowBox[{"ImageSize", "->", "Large"}], ",", " ", 
+         RowBox[{"PlotLabel", "\[Rule]", "\"\<Homogenised system\>\""}]}], 
+        "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "tmaxn"}], "}"}], ",", 
+     RowBox[{"AnimationRate", "\[Rule]", "0.75`"}], ",", 
+     RowBox[{"AnimationRunning", "\[Rule]", "False"}], ",", 
+     RowBox[{"ContentSize", "\[Rule]", "All"}], ",", " ", 
+     RowBox[{"DefaultDuration", "\[Rule]", "10"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.8334629464581766`*^9, 3.8334629499307327`*^9}, {
+   3.833463657230978*^9, 3.8334636586301947`*^9}, {3.8334647052581215`*^9, 
+   3.833464719612059*^9}, {3.8334654341693597`*^9, 3.833465440170859*^9}, {
+   3.904403974957431*^9, 3.9044040495128393`*^9}, {3.904404084709619*^9, 
+   3.9044040867420607`*^9}, 3.9044041276422167`*^9},
+ NumberMarks->False,
+ CellLabel->"In[1]:=",ExpressionUUID->"d0a700dc-8da9-4f47-af65-d4c939ca45b9"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{"\"\<animation1.mp4\>\"", ",", "animation1"}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.83346368104926*^9, 3.8334636895702085`*^9}, {
+   3.8336941917393265`*^9, 3.8336941946112375`*^9}, {3.904404091120562*^9, 
+   3.904404101478409*^9}, 3.904404343590138*^9, 
+   3.904404377279895*^9},ExpressionUUID->"61737cdc-ff01-4b72-af47-\
+3b252d9a4304"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"animation2", "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Show", "[", 
+        RowBox[{
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Red", ",", 
+            RowBox[{"Sphere", "[", 
+             RowBox[{
+              RowBox[{"Q1", "[", "t", "]"}], ",", "0.1`"}], "]"}]}], "}"}], 
+          "]"}], ",", 
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Red", ",", 
+            RowBox[{"Sphere", "[", 
+             RowBox[{
+              RowBox[{"Q2", "[", "t", "]"}], ",", "0.1`"}], "]"}]}], "}"}], 
+          "]"}], ",", 
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Red", ",", 
+            RowBox[{"Sphere", "[", 
+             RowBox[{
+              RowBox[{"Q3", "[", "t", "]"}], ",", "0.1`"}], "]"}]}], "}"}], 
+          "]"}], ",", 
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Red", ",", 
+            RowBox[{"Sphere", "[", 
+             RowBox[{
+              RowBox[{"Q4", "[", "t", "]"}], ",", "0.1`"}], "]"}]}], "}"}], 
+          "]"}], ",", 
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Black", ",", 
+            RowBox[{"Line", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Q1", "[", "t", "]"}], ",", 
+               RowBox[{"Q2", "[", "t", "]"}]}], "}"}], "]"}]}], "}"}], "]"}], 
+         ",", 
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Black", ",", 
+            RowBox[{"Line", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Q2", "[", "t", "]"}], ",", 
+               RowBox[{"Q3", "[", "t", "]"}]}], "}"}], "]"}]}], "}"}], "]"}], 
+         ",", 
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Black", ",", 
+            RowBox[{"Line", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Q3", "[", "t", "]"}], ",", 
+               RowBox[{"Q4", "[", "t", "]"}]}], "}"}], "]"}]}], "}"}], "]"}], 
+         ",", 
+         RowBox[{"PlotRange", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"min1", "-", "0.1`"}], ",", 
+              RowBox[{"max1", "+", "0.1`"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"min2", "-", "0.1`"}], ",", 
+              RowBox[{"max2", "+", "0.1`"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"min3", "-", "0.1`"}], ",", 
+              RowBox[{"max3", "+", "0.1`"}]}], "}"}]}], "}"}]}], ",", 
+         RowBox[{"Axes", "\[Rule]", "True"}], ",", " ", 
+         RowBox[{"ImageSize", "->", "Large"}], ",", " ", 
+         RowBox[{"PlotLabel", "\[Rule]", "\"\<Original system\>\""}]}], "]"}],
+        ",", 
+       RowBox[{"Show", "[", 
+        RowBox[{
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Red", ",", 
+            RowBox[{"Sphere", "[", 
+             RowBox[{
+              RowBox[{"Qn1", "[", "t", "]"}], ",", "0.1`"}], "]"}]}], "}"}], 
+          "]"}], ",", 
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Red", ",", 
+            RowBox[{"Sphere", "[", 
+             RowBox[{
+              RowBox[{"Qn2", "[", "t", "]"}], ",", "0.1`"}], "]"}]}], "}"}], 
+          "]"}], ",", 
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Red", ",", 
+            RowBox[{"Sphere", "[", 
+             RowBox[{
+              RowBox[{"Qn3", "[", "t", "]"}], ",", "0.1`"}], "]"}]}], "}"}], 
+          "]"}], ",", 
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Red", ",", 
+            RowBox[{"Sphere", "[", 
+             RowBox[{
+              RowBox[{"Qn4", "[", "t", "]"}], ",", "0.1`"}], "]"}]}], "}"}], 
+          "]"}], ",", 
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Black", ",", 
+            RowBox[{"Line", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Qn1", "[", "t", "]"}], ",", 
+               RowBox[{"Qn2", "[", "t", "]"}]}], "}"}], "]"}]}], "}"}], "]"}],
+          ",", 
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Black", ",", 
+            RowBox[{"Line", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Qn2", "[", "t", "]"}], ",", 
+               RowBox[{"Qn3", "[", "t", "]"}]}], "}"}], "]"}]}], "}"}], "]"}],
+          ",", 
+         RowBox[{"Graphics3D", "[", 
+          RowBox[{"{", 
+           RowBox[{"Black", ",", 
+            RowBox[{"Line", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Qn3", "[", "t", "]"}], ",", 
+               RowBox[{"Qn4", "[", "t", "]"}]}], "}"}], "]"}]}], "}"}], "]"}],
+          ",", 
+         RowBox[{"PlotRange", "\[Rule]", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"min1n", "-", "0.1`"}], ",", 
+              RowBox[{"max1n", "+", "0.1`"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"min2n", "-", "0.1`"}], ",", 
+              RowBox[{"max2n", "+", "0.1`"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"min3n", "-", "0.1`"}], ",", 
+              RowBox[{"max3n", "+", "0.1`"}]}], "}"}]}], "}"}]}], ",", 
+         RowBox[{"Axes", "\[Rule]", "True"}], ",", 
+         RowBox[{"ImageSize", "->", "Large"}], ",", "  ", 
+         RowBox[{"PlotLabel", "\[Rule]", "\"\<Homogenised system\>\""}]}], 
+        "]"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "tmax", ",", "0.05"}], "}"}]}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.8334637740038557`*^9, 3.833463802950449*^9}, {
+  3.8334638466939487`*^9, 3.8334638467779875`*^9}, {3.8334638952641335`*^9, 
+  3.833463896149173*^9}, {3.833464345518316*^9, 3.8334643476115627`*^9}, {
+  3.833464761718909*^9, 3.833464788506893*^9}, {3.8334652076628246`*^9, 
+  3.8334652130950933`*^9}, {3.8334654512745028`*^9, 3.8334654878513737`*^9}, {
+  3.8336942279230704`*^9, 3.833694237082755*^9}, {3.904403543365151*^9, 
+  3.904403545253401*^9}, {3.904403655354032*^9, 3.904403659466289*^9}, {
+  3.904403690043531*^9, 3.904403693319557*^9}, {3.90440411179226*^9, 
+  3.904404114516718*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"0c1e333b-18c7-40d5-a6bb-410dad8ace29"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{"\"\<animation2.mp4\>\"", ",", "animation2"}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.833464453959934*^9, 3.8334644616818733`*^9}, 
+   3.8334646351474037`*^9, {3.833464729849061*^9, 3.8334647413285103`*^9}, {
+   3.8334649185457325`*^9, 3.8334649222075377`*^9}, {3.8336940572031*^9, 
+   3.833694059902752*^9}, {3.8336942081133647`*^9, 3.833694211488214*^9}, {
+   3.904403880430311*^9, 3.9044038818801517`*^9}, 3.904404118505578*^9, {
+   3.904404345332309*^9, 
+   3.904404381061922*^9}},ExpressionUUID->"8fc8368e-20b5-46bd-a9f3-\
+646d8ec0b348"]
+},
+WindowSize->{1440., 771.75},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"13.2 for Linux x86 (64-bit) (December 7, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"d41190e4-f3b4-4b62-ac5e-c3d931ff7636"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 6564, 171, 186, "Input",ExpressionUUID->"d0a700dc-8da9-4f47-af65-d4c939ca45b9"],
+Cell[7125, 193, 410, 9, 29, "Input",ExpressionUUID->"61737cdc-ff01-4b72-af47-3b252d9a4304"],
+Cell[7538, 204, 6572, 171, 204, "Input",ExpressionUUID->"0c1e333b-18c7-40d5-a6bb-410dad8ace29"],
+Cell[14113, 377, 613, 12, 29, "Input",ExpressionUUID->"8fc8368e-20b5-46bd-a9f3-646d8ec0b348"]
+}
+]
+*)
+
