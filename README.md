@@ -1,6 +1,8 @@
 # butane
 
-This repository comprises code that simulates the dynamics of a butane molecule as described in [^1] first for the [original system](/original_system.nb) and second for the [homogenised system](/homogenised_system.nb). To combine the two animations into one, as presemted below, use [this](/create_animation.nb).
+This repository comprises code that simulates the dynamics of a butane molecule as described in [^1] first for the [original system](/original_system.nb) and second for the [homogenised system](/homogenised_system.nb). To combine the two animations into one, as presented below, use [this](/create_animation.nb).
+
+Note: The initial conditions are the same in both systems, but the respective dynamics diverge considerably over time.
 
 ![Animation](/animation/animation.gif)
 
