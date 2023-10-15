@@ -4,7 +4,7 @@ This repository comprises code that simulates the dynamics of a butane molecule 
 
 Note: The initial conditions are the same in both systems, but the respective dynamics diverge considerably over time.
 
-![Animation](/animation/animation.gif)
+![Animation](https://github.com/mtklar/butane/assets/49459830/a3670ea5-2a4f-49d7-82ce-3bf258995702)
 
 [^1]: F. Bornemann. *Homogenization in Time of Singularly Perturbed Mechanical
 Systems*. Vol. 1687. Lecture Notes in Mathematics. Springer-Verlag, Berlin, 1998. [DOI](https://doi.org/10.1007/BFb0092091)
